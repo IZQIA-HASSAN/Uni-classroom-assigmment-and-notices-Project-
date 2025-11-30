@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container1">
+        <h1>Assignment and notices web app</h1>
+
+
+    </div>
+    <section class="layout">
+
+        <div class="sidebar">
+            <img id="hamburger" src="hamburger.svg" alt="">
+            <div class="sidebarval">
+
+                <div class="val" id="dashBtn"><img src="home.svg">
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="val" id="assignBtn"><img src="assignment.svg">
+                    <h3>Assignment</h3>
+                </div>
+                <div class="val" id="noticeBtn"><img src="notification.svg">
+                    <h3>Notices</h3>
+                </div>
+                <div class="val" id="profileBtn"><img src="profile.svg">
+                    <h3>Profile</h3>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="main-body">
+            <h2>Dashboard</h2>
+
+            <div class="dashboard-section">
+                <h3>Upcoming Assignments</h3>
+                <div class="card">Math Homework — Due Jan 12</div>
+                <div class="card">Physics Lab — Due Jan 15</div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Recent Notices</h3>
+                <div class="card">Holiday on Friday</div>
+                <div class="card">Quiz on Monday</div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+</body>
+<style>
+    .container1 {
+        border: 2px solid black;
+        width: 97vw;
+        height: 4vw;
+        display: flex;
+        justify-content: center;
+        border-radius: 6px;
+
+    }
+
+    .sidebar {
+        border: 2px solid black;
+        width: 15vw;
+        height: 42vw;
+        position: relative;
+        top: 1vw;
+        border-radius: 6px;
+        /* display: flex; */
+
+
+    }
+
+    .sidebarval {
+        /* border: 2px solid ; */
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        gap: 3vw;
+        margin: 4px;
+    }
+
+    .val {
+        width: 80%;
+        padding: 12px 0;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 8px;
+
+        cursor: pointer;
+        font-size: 18px;
+
+        transition: all 0.3s ease;
+        /* Smooth animation */
+    }
+
+    .val:hover {
+        background: #e5e5e5;
+        transform: scale(1.05);
+        /* Slight zoom */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-body {
+        border: 2px solid black;
+        height: 41.3vw;
+        width: 96vw;
+        margin: 15px;
+        padding: 5px;
+        border-radius: 6px;
+    }
+
+    .layout {
+        display: flex;
+    }
+
+    .main-body {
+        flex: 1;
+        padding: 30px;
+        background: #fff;
+    }
+
+    .dashboard-section {
+        margin-bottom: 30px;
+    }
+
+    .card {
+        background: #f7f7f7;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+</style>
+
+</html>

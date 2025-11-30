@@ -1,0 +1,118 @@
+/* === General Page Styles === */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.page-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.page-title {
+    text-align: center;
+}
+
+/* === Search Bar === */
+.search-area {
+    margin: 20px 0;
+    text-align: center;
+}
+.search-area input {
+    width: 80%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* === Filter Buttons === */
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.filter-btn {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #fff;
+}
+.filter-btn.active {
+    font-weight: bold;
+}
+
+/* === Assignment Cards === */
+.assignment-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.assignment-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+}
+.assignment-card h3 {
+    margin: 0 0 5px 0;
+}
+.assignment-card .course,
+.assignment-card .deadline {
+    margin: 2px 0;
+}
+.status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.status.pending { background: #ffecb3; }
+.status.submitted { background: #c8e6c9; }
+.status.overdue { background: #ffcdd2; }
+.view-btn {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* === Add Assignment Section === */
+#addAssignmentBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+#assignmentFormContainer {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#assignmentFormContainer.hidden {
+    display: none;
+}
+#assignmentForm input, 
+#assignmentForm select, 
+#assignmentForm textarea {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#assignmentForm button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
