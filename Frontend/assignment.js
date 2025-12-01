@@ -56,3 +56,9 @@ filterButtons.forEach(btn => {
         });
     });
 });
+
+// moving between pages 
+
+document.getElementById("dashBtn").addEventListener("click" ,()=>{
+    window.location.href = "dashboard.html"
+})

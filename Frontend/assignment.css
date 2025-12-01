@@ -1,118 +1,227 @@
-/* === General Page Styles === */
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-.page-container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.page-title {
-    text-align: center;
+/* ---------------- Sidebar ---------------- */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #F4F6FF;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
-/* === Search Bar === */
-.search-area {
-    margin: 20px 0;
-    text-align: center;
-}
-.search-area input {
-    width: 80%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.sidebar-menu {
+    margin-top: 30px;
 }
 
-/* === Filter Buttons === */
-.filters {
+.menu-item {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+}
+
+.menu-item:hover {
+    background: #e9edff;
+    transform: translateX(5px);
+}
+
+.menu-item img {
+    width: 24px;
+}
+
+.menu-item span {
+    font-size: 16px;
+}
+
+
+/* ---------------- Page Container ---------------- */
+.page-container {
+    margin-left: 260px;
+    padding: 30px;
+    background: #FAFAFF;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 28px;
     margin-bottom: 20px;
 }
-.filter-btn {
-    padding: 8px 12px;
-    margin: 0 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+/* ---------------- Add Button ---------------- */
+.add-btn {
+    background: #4C6EF5;
+    padding: 10px 18px;
+    color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    background: #fff;
-}
-.filter-btn.active {
-    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
 }
 
-/* === Assignment Cards === */
-.assignment-wrapper {
+.add-btn:hover {
+    background: #2f54eb;
+    transform: translateY(-3px);
+}
+
+
+/* ---------------- Form ---------------- */
+.assignment-form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.assignment-form input,
+.assignment-form select,
+.assignment-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.submit-btn {
+    background: #4C6EF5;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2f54eb;
+}
+
+
+/* ---------------- Search Bar ---------------- */
+.search-area {
+    margin-bottom: 20px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    font-size: 15px;
+}
+
+
+/* ---------------- Filters ---------------- */
+.filters {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
+
+.filter-btn {
+    padding: 8px 15px;
+    border: 1px solid #4C6EF5;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #4C6EF5;
+    color: white;
+}
+
+
+/* ---------------- Assignment Cards ---------------- */
+.assignment-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+}
+
 .assignment-card {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: #fafafa;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.25s;
 }
+
+.assignment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .assignment-card h3 {
-    margin: 0 0 5px 0;
+    margin-bottom: 8px;
 }
-.assignment-card .course,
-.assignment-card .deadline {
-    margin: 2px 0;
+
+.course,
+.deadline {
+    color: #555;
+    margin-bottom: 5px;
 }
+
+/* Status colors */
 .status {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
 }
-.status.pending { background: #ffecb3; }
-.status.submitted { background: #c8e6c9; }
-.status.overdue { background: #ffcdd2; }
+
+.status.pending { background: #FFF3CD; color: #B58B00; }
+.status.submitted { background: #D4EDDA; color: #1B6D36; }
+.status.overdue { background: #F8D7DA; color: #9C1C27; }
+
 .view-btn {
     margin-top: 10px;
-    padding: 6px 10px;
+    background: #4C6EF5;
     border: none;
-    border-radius: 4px;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-/* === Add Assignment Section === */
-#addAssignmentBtn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 15px;
-    cursor: pointer;
+.view-btn:hover {
+    background: #2f54eb;
 }
-#assignmentFormContainer {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+
+/* ---------------- Animations ---------------- */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
 }
-#assignmentFormContainer.hidden {
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+}
+
+.delay {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hide class */
+.hidden {
     display: none;
-}
-#assignmentForm input, 
-#assignmentForm select, 
-#assignmentForm textarea {
-    display: block;
-    margin: 10px 0;
-    width: 100%;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-#assignmentForm button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }

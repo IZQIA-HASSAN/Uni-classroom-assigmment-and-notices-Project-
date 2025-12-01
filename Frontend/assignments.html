@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
     <link rel="stylesheet" href="assignment.css">
-    
 </head>
+
 <body>
 
-    <div class="page-container">
-        <h2 class="page-title">Assignments</h2>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- <img id="hamburger" src="hamburger.svg" alt="" class="hamburger"> -->
 
-        <!-- Add Assignment Section -->
-        <button id="addAssignmentBtn">Add New Assignment</button>
-        <div id="assignmentFormContainer" class="hidden">
-            <form id="assignmentForm">
+        <div class="sidebar-menu">
+            <div class="menu-item" id="dashBtn"><img src="home.svg"><span>Dashboard</span></div>
+            <div class="menu-item" id="assignBtn"><img src="assignment.svg"><span>Assignments</span></div>
+            <div class="menu-item" id="noticeBtn"><img src="notification.svg"><span>Notices</span></div>
+            <div class="menu-item" id="profileBtn"><img src="profile.svg"><span>Profile</span></div>
+        </div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-container">
+        <h2 class="page-title fade-in">Assignments</h2>
+
+        <!-- ADD BUTTON -->
+        <button id="addAssignmentBtn" class="add-btn fade-in-up">+ Add New Assignment</button>
+
+        <!-- FORM -->
+        <div id="assignmentFormContainer" class="hidden fade-in-up">
+            <form id="assignmentForm" class="assignment-form">
                 <input type="text" name="title" placeholder="Assignment Title" required>
                 <input type="text" name="course" placeholder="Course Name" required>
                 <input type="date" name="deadline" required>
@@ -25,26 +40,25 @@
                     <option value="overdue">Overdue</option>
                 </select>
                 <textarea name="description" placeholder="Assignment Details"></textarea>
-                <button type="submit">Post Assignment</button>
+                <button type="submit" class="submit-btn">Post Assignment</button>
             </form>
         </div>
 
-        <!-- SEARCH BAR -->
-        <div class="search-area">
+        <!-- SEARCH -->
+        <div class="search-area fade-in-up">
             <input type="text" id="searchBox" placeholder="Search assignments...">
         </div>
 
-        <!-- FILTER BUTTONS -->
-        <div class="filters">
+        <!-- FILTERS -->
+        <div class="filters fade-in-up delay">
             <button class="filter-btn active">All</button>
             <button class="filter-btn">Pending</button>
             <button class="filter-btn">Submitted</button>
             <button class="filter-btn">Overdue</button>
         </div>
 
-        <!-- ASSIGNMENT LIST -->
-        <div class="assignment-wrapper">
-            <!-- Example Existing Assignments -->
+        <!-- LIST -->
+        <div class="assignment-wrapper fade-in-up delay">
             <div class="assignment-card">
                 <h3>Math Homework #3</h3>
                 <p class="course">Course: Mathematics</p>
@@ -69,6 +83,7 @@
                 <button class="view-btn">View Details</button>
             </div>
         </div>
+
     </div>
 
     <script src="assignment.js"></script>
